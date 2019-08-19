@@ -13,7 +13,9 @@ class App extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Home(),
       theme: ThemeData(
-        primarySwatch: Colors.yellow
+        primarySwatch: Colors.yellow,
+        highlightColor: Color.fromRGBO(255, 255, 255, 0.5),
+        splashColor: Colors.white70
       )
     );
   }
@@ -47,6 +49,10 @@ class Home extends StatelessWidget {
             ],
             elevation: 0.0,
             bottom: TabBar(
+              unselectedLabelColor: Colors.black38,
+              indicatorColor: Colors.black54,
+              indicatorSize: TabBarIndicatorSize.label,
+              indicatorWeight: 1.0,
               tabs: <Widget>[
                 Tab(icon: Icon(Icons.local_florist),),
                 Tab(icon: Icon(Icons.change_history),),
@@ -60,7 +66,17 @@ class Home extends StatelessWidget {
               Icon(Icons.change_history, size: 128.0, color: Colors.black12,),
               Icon(Icons.directions_bike, size: 128.0, color: Colors.black12,),
             ],
-          )
+          ),
+          drawer: Container(
+            color: Colors.white,
+            padding: EdgeInsets.all(8.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Text('This is drawer'),
+              ],
+            ),
+          ),
         ),
       );
     }
