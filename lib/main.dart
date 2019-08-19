@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './demo/drawer_demo.dart';
 
 // void main() {
 //   return runApp(App());
@@ -62,35 +63,7 @@ class Home extends StatelessWidget {
               Icon(Icons.directions_bike, size: 128.0, color: Colors.black12,),
             ],
           ),
-          drawer: Drawer(
-            child: ListView(
-              padding: EdgeInsets.zero,
-              children: <Widget>[
-                UserAccountsDrawerHeader(
-                  accountName: Text('xjp', style: TextStyle(fontWeight: FontWeight.bold),),
-                  accountEmail: Text('923603565@qq.com'),
-                  currentAccountPicture: CircleAvatar(
-                    backgroundImage: AssetImage('images/xjp.jpeg'),
-                  ),
-                ),
-                ListTile(
-                  title: Text('Messages', textAlign: TextAlign.right,),
-                  trailing: Icon(Icons.message, color: Colors.black12, size:22.0),
-                  onTap: () => Navigator.pop(context),
-                ),
-                ListTile(
-                  title: Text('Favorite', textAlign: TextAlign.right,),
-                  trailing: Icon(Icons.favorite, color: Colors.black12, size:22.0),
-                  onTap: () => Navigator.pop(context),
-                ),
-                ListTile(
-                  title: Text('Settings', textAlign: TextAlign.right,),
-                  trailing: Icon(Icons.settings, color: Colors.black12, size:22.0),
-                  onTap: () => Navigator.pop(context),
-                ),
-              ],
-            ),
-          )
+          drawer: DrawerDemo(),
         ),
       );
     }
