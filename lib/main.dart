@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import './demo/drawer_demo.dart';
+import './demo/bottom_navigation_bar_demo.dart';
+import './demo/listview_demo.dart';
 
 // void main() {
 //   return runApp(App());
@@ -58,34 +60,14 @@ class Home extends StatelessWidget {
           ),
           body: TabBarView(
             children: <Widget>[
-              Icon(Icons.local_florist, size:128.0, color: Colors.black12,),
+              // Icon(Icons.local_florist, size:128.0, color: Colors.black12,),
+              ListViewDemo(),
               Icon(Icons.change_history, size: 128.0, color: Colors.black12,),
               Icon(Icons.directions_bike, size: 128.0, color: Colors.black12,),
             ],
           ),
           drawer: DrawerDemo(),
-          bottomNavigationBar: BottomNavigationBar(
-            type: BottomNavigationBarType.fixed,
-            fixedColor: Colors.black,
-            items: [
-              BottomNavigationBarItem(
-                icon: Icon(Icons.explore),
-                title: Text('Explore')
-              ),
-              BottomNavigationBarItem(
-                icon: Icon(Icons.history),
-                title: Text('History')
-              ),
-              BottomNavigationBarItem(
-                icon: Icon(Icons.list),
-                title: Text('List')
-              ),
-              BottomNavigationBarItem(
-                icon: Icon(Icons.person),
-                title: Text('Mine')
-              ),
-            ],
-          ),
+          bottomNavigationBar: BottomNavgationBarDemo(),
         ),
       );
     }
