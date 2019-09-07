@@ -22,7 +22,24 @@ class LayoutDemo extends StatelessWidget {
         // 设置SizedBox大小
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          Stack(
+          // StackDemo(),
+
+          AspectRatio(
+            aspectRatio: 16.0/9.0,
+            child: Container(
+              color: Color.fromRGBO(3, 54, 255, 1.0),
+            ),
+          )
+        ],
+      ),
+    );
+  }
+}
+
+class StackDemo extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Stack(
             alignment: Alignment.topLeft,
             children: <Widget>[
               SizedBox(
@@ -84,10 +101,7 @@ class LayoutDemo extends StatelessWidget {
                 child: Icon(Icons.ac_unit, color: Colors.white, size: 32.0,),
               ),
             ],
-          ),
-        ],
-      ),
-    );
+          );
   }
 }
 
