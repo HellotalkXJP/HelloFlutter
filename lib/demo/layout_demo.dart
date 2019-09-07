@@ -22,30 +22,68 @@ class LayoutDemo extends StatelessWidget {
         // 设置SizedBox大小
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          SizedBox(
-            child: Container(
-              width: 200.0,
-              height: 300.0,
-              decoration: BoxDecoration(
-                color: Color.fromRGBO(3, 54, 255, 1.0),
-                borderRadius: BorderRadius.circular(8.0),
+          Stack(
+            alignment: Alignment.topLeft,
+            children: <Widget>[
+              SizedBox(
+                child: Container(
+                  alignment: Alignment(0.0, -0.9), //设置对齐方式
+                  width: 200.0,
+                  height: 300.0,
+                  decoration: BoxDecoration(
+                    color: Color.fromRGBO(3, 54, 255, 1.0),
+                    borderRadius: BorderRadius.circular(8.0),
+                  ),
+                  child: Icon(Icons.ac_unit, color: Colors.white, size: 32.0,),
+                ),
               ),
-              child: Icon(Icons.ac_unit, color: Colors.white, size: 32.0,),
-            ),
-          ),
-          SizedBox(
-            height: 32.0,
-          ),
-          SizedBox(
-            child: Container(
-              width: 200.0,
-              height: 300.0,
-              decoration: BoxDecoration(
-                color: Color.fromRGBO(3, 54, 255, 1.0),
-                borderRadius: BorderRadius.circular(8.0),
+              SizedBox(
+                height: 32.0,
               ),
-              child: Icon(Icons.brightness_2, color: Colors.white, size: 32.0,),
-            ),
+              SizedBox(
+                child: Container(
+                  width: 100.0,
+                  height: 100.0,
+                  decoration: BoxDecoration(
+                    color: Color.fromRGBO(3, 54, 255, 1.0),
+                    // borderRadius: BorderRadius.circular(8.0),
+                    shape: BoxShape.circle,
+                    gradient: RadialGradient(
+                      colors: [
+                        Color.fromRGBO(7, 102, 255, 1.0),
+                        Color.fromRGBO(3, 54, 255, 1.0),
+                      ],
+                    ),
+                  ),
+                  child: Icon(Icons.brightness_2, color: Colors.white, size: 32.0,),
+                ),
+              ),
+              Positioned(
+                right: 20.0,
+                top: 120.0,
+                child: Icon(Icons.ac_unit, color: Colors.white, size: 32.0,),
+              ),
+              Positioned(
+                right: 70.0,
+                top: 180.0,
+                child: Icon(Icons.ac_unit, color: Colors.white, size: 32.0,),
+              ),
+              Positioned(
+                right: 90.0,
+                bottom: 20.0,
+                child: Icon(Icons.ac_unit, color: Colors.white, size: 32.0,),
+              ),
+              Positioned(
+                right: 4.0,
+                bottom: -4.0,
+                child: Icon(Icons.ac_unit, color: Colors.white, size: 32.0,),
+              ),
+              Positioned(
+                right: 20.0,
+                top: 120.0,
+                child: Icon(Icons.ac_unit, color: Colors.white, size: 32.0,),
+              ),
+            ],
           ),
         ],
       ),
