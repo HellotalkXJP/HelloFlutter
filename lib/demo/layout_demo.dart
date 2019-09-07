@@ -23,14 +23,29 @@ class LayoutDemo extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           // StackDemo(),
-
-          AspectRatio(
-            aspectRatio: 16.0/9.0,
+          // AspectRatioDemo(),
+          ConstrainedBox(
+            constraints: BoxConstraints(
+              minHeight: 200.0, // 最小高度
+              maxWidth: 200.0,  // 最大宽度
+            ),
             child: Container(
               color: Color.fromRGBO(3, 54, 255, 1.0),
             ),
-          )
+          ),
         ],
+      ),
+    );
+  }
+}
+
+class AspectRatioDemo extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return AspectRatio(
+      aspectRatio: 16.0/9.0,
+      child: Container(
+        color: Color.fromRGBO(3, 54, 255, 1.0),
       ),
     );
   }
