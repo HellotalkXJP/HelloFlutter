@@ -24,7 +24,17 @@ class LayoutDemo extends StatelessWidget {
         children: <Widget>[
           // StackDemo(),
           // AspectRatioDemo(),
-          ConstrainedBox(
+          ConstrainedBoxDemo(),
+        ],
+      ),
+    );
+  }
+}
+
+class ConstrainedBoxDemo extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return ConstrainedBox(
             constraints: BoxConstraints(
               minHeight: 200.0, // 最小高度
               maxWidth: 200.0,  // 最大宽度
@@ -32,10 +42,7 @@ class LayoutDemo extends StatelessWidget {
             child: Container(
               color: Color.fromRGBO(3, 54, 255, 1.0),
             ),
-          ),
-        ],
-      ),
-    );
+          );
   }
 }
 
