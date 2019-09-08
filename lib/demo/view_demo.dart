@@ -2,6 +2,40 @@ import 'package:flutter/material.dart';
 import '../model/post.dart';
 
 class ViewDemo extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return GridViewExtentDemo();
+  }
+}
+
+class GridViewExtentDemo extends StatelessWidget {
+  List<Widget> _buildTitles(int length) {
+    return List.generate(length, (int index) {
+      return Container(
+          color: Colors.grey[300],
+          alignment: Alignment(0.0, 0.0),
+          child: Text(
+            'Item $index',
+            style: TextStyle(fontSize: 18.0, color: Colors.grey),
+          ),
+        );
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return GridView.extent(
+      maxCrossAxisExtent: 200.0, // 每个item的大小
+      crossAxisSpacing: 16.0, //间隔
+      mainAxisSpacing: 16.0,
+      // scrollDirection: Axis.horizontal, // 滑动方向 默认垂直
+      children: _buildTitles(100),
+    );
+  }
+}
+
+// 网格视图
+class GridViewCountDemo extends StatelessWidget {
   List<Widget> _buildTitles(int length) {
     return List.generate(length, (int index) {
       return Container(
