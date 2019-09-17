@@ -5,6 +5,7 @@ import './demo/listview_demo.dart';
 import './demo/basic_demo.dart';
 import './demo/layout_demo.dart';
 import './demo/view_demo.dart';
+import './demo/sliver_demo.dart';
 
 // void main() {
 //   return runApp(App());
@@ -18,6 +19,7 @@ class App extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false, // 右上角是否显示debug
       home: Home(),
+      // home: SliverDemo(),
       theme: ThemeData(
         primarySwatch: Colors.yellow,
         highlightColor: Color.fromRGBO(255, 255, 255, 0.5),
@@ -71,7 +73,8 @@ class Home extends StatelessWidget {
               // Icon(Icons.directions_bike, size: 128.0, color: Colors.black12,),
               LayoutDemo(),
 
-              ViewDemo(),
+              // ViewDemo(),
+              SliverDemo(),
             ],
           ),
           drawer: DrawerDemo(),
