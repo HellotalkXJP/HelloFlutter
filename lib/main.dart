@@ -20,8 +20,13 @@ class App extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false, // 右上角是否显示debug
       // home: Home(),
-      home: NavigatorDemo(),
+      // home: NavigatorDemo(),
       // home: SliverDemo(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => Home(),
+        '/about': (context) => Page(title: 'About',),
+      },
       theme: ThemeData(
         primarySwatch: Colors.yellow,
         highlightColor: Color.fromRGBO(255, 255, 255, 0.5),

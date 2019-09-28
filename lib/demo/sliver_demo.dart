@@ -21,6 +21,7 @@ class SliverDemo extends StatelessWidget {
                   letterSpacing: 3.0, // 文字间隔
                   fontWeight: FontWeight.w400,
                 ),
+                // textAlign: TextAlign.right,
               ),
               background: Image.network(
                 'https://resources.ninghao.net/images/overkill.png',
