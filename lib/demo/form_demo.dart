@@ -46,6 +46,12 @@ class _RegisterFormState extends State<RegisterForm> {
 
       debugPrint('username: $username');
       debugPrint('password: $password');
+
+      Scaffold.of(context).showSnackBar(
+        SnackBar(
+          content: Text('Register...'),
+        ),
+      );
     } else {
       setState(() {
         autovalidate = true;
